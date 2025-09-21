@@ -28,3 +28,26 @@ console.log(getShippingCost("China")); // "Shipping to China will cost 100 credi
 console.log(getShippingCost("Chile")); // "Shipping to Chile will cost 250 credits"
 console.log(getShippingCost("Jamaica")); // "Shipping to Jamaica will cost 120 credits"
 console.log(getShippingCost("Sweden")); // "Sorry, there is no delivery to your country"
+
+
+function getFoodDeliveryCost (country) {
+    let price;
+    switch (country) {
+        case "USA":
+            price = 50;
+            break;
+            case "Canada":
+                price = 80;
+                break;
+                case "Mexico":
+                    price = 70;
+                    break;
+                    case "Brazil":
+                        price = 60;
+                        break;
+                        default:
+                            return "Sorry, delivery to your country is not available"
+
+    }
+    return `Delivery to ${country} will cost ${price} credits`
+}
